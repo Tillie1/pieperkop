@@ -1,0 +1,277 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".pieperkop"
+    android:background="#ff26c50f"
+    android:id="@+id/pk">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pieper"
+        android:src="@drawable/body"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/armen"
+        android:layout_alignStart="@+id/armen" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/armen"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/arms"
+        android:layout_alignBottom="@+id/pieper"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/oren"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ears"
+        android:layout_alignBottom="@+id/pieper"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/neus"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/nose"
+        android:layout_alignBottom="@+id/pieper"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hoed"
+        android:src="@drawable/hat"
+        android:layout_alignTop="@+id/pieper"
+        android:layout_alignLeft="@+id/pieper"
+        android:layout_alignStart="@+id/pieper"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wenkbrouwen"
+        android:layout_alignBottom="@+id/armen"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/eyebrows"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ogen"
+        android:layout_alignBottom="@+id/armen"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/eyes"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bril"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/glasses"
+        android:layout_alignBottom="@+id/pieper"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mond"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mouth"
+        android:layout_alignBottom="@+id/pieper"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/voeten"
+        android:src="@drawable/shoes"
+        android:layout_alignTop="@+id/pieper"
+        android:layout_alignLeft="@+id/pieper"
+        android:layout_alignStart="@+id/pieper"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/snor"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mustache"
+        android:layout_alignBottom="@+id/pieper"
+        android:visibility="invisible" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hoed"
+        android:id="@+id/checkBox_hoed"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/pieper"
+        android:layout_alignLeft="@+id/pieper"
+        android:layout_alignStart="@+id/pieper"
+        android:button="@drawable/customcheckbox"
+        android:checked="false"
+        android:onClick="onCheckboxClicked" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="w'brouwen"
+        android:id="@+id/checkBox_wbrouwen"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_below="@+id/checkBox_hoed"
+        android:layout_alignLeft="@+id/pieper"
+        android:layout_alignStart="@+id/checkBox_hoed"
+        android:layout_marginTop="16dp"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="neus"
+        android:id="@+id/checkBox_neus"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/checkBox_wbrouwen"
+        android:layout_alignLeft="@+id/pieper"
+        android:layout_alignStart="@+id/checkBox_wbrouwen"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="snor"
+        android:id="@+id/checkBox_snor"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_below="@+id/checkBox_neus"
+        android:layout_alignLeft="@+id/pieper"
+        android:layout_alignStart="@+id/checkBox_neus"
+        android:layout_marginTop="17dp"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="armen"
+        android:id="@+id/checkBox_armen"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_below="@+id/checkBox_snor"
+        android:layout_alignLeft="@+id/pieper"
+        android:layout_alignStart="@+id/checkBox_snor"
+        android:layout_marginTop="15dp"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ogen"
+        android:id="@+id/checkBox_ogen"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_alignBaseline="@+id/checkBox_hoed"
+        android:layout_alignBottom="@+id/checkBox_hoed"
+        android:layout_toRightOf="@+id/checkBox_wbrouwen"
+        android:layout_toEndOf="@+id/checkBox_wbrouwen"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bril"
+        android:id="@+id/checkBox_bril"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_above="@+id/checkBox_mond"
+        android:layout_alignLeft="@+id/checkBox_ogen"
+        android:layout_alignStart="@+id/checkBox_ogen"
+        android:layout_marginBottom="17dp"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mond"
+        android:id="@+id/checkBox_mond"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_alignTop="@+id/checkBox_neus"
+        android:layout_alignLeft="@+id/checkBox_bril"
+        android:layout_alignStart="@+id/checkBox_bril"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="oren"
+        android:id="@+id/checkBox_oren"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_alignBottom="@+id/checkBox_snor"
+        android:layout_alignLeft="@+id/checkBox_mond"
+        android:layout_alignStart="@+id/checkBox_mond"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="voeten"
+        android:id="@+id/checkBox_voeten"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:button="@drawable/customcheckbox"
+        android:layout_alignTop="@+id/checkBox_armen"
+        android:layout_alignLeft="@+id/checkBox_oren"
+        android:layout_alignStart="@+id/checkBox_oren"
+        android:onClick="onCheckboxClicked"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Userinfo"
+        android:layout_below="@+id/pieper"
+        android:layout_alignLeft="@+id/pieper"
+        android:layout_alignStart="@+id/pieper"
+        android:text="versier de pieper met een simpele klik"
+        android:textSize="14dp"
+        android:background="#ff26c50f"
+        android:textColor="#fffff4f6"
+        android:textStyle="bold"
+        android:autoText="false"
+        android:editable="false"
+        android:inputType="none" />
+
+</RelativeLayout>
