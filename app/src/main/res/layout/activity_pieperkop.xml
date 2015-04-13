@@ -182,7 +182,7 @@
         android:layout_alignLeft="@+id/pieper"
         android:layout_alignStart="@+id/checkBox_snor"
         android:layout_marginTop="15dp"
-        android:onClick="onCheckboxClicked"/>
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -262,9 +262,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Userinfo"
-        android:layout_below="@+id/pieper"
-        android:layout_alignLeft="@+id/pieper"
-        android:layout_alignStart="@+id/pieper"
         android:text="versier de pieper met een simpele klik"
         android:textSize="14dp"
         android:background="#ff26c50f"
@@ -272,6 +269,13 @@
         android:textStyle="bold"
         android:autoText="false"
         android:editable="false"
-        android:inputType="none" />
+        android:inputType="none"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pieper"
+        android:layout_above="@+id/checkBox_ogen" />
 
 </RelativeLayout>
